@@ -20,7 +20,7 @@ const AppContent = () => {
                </p>
            </div>
           </div>)
-           : <p className='emptyText'>No Todos </p>
+           : <p className='emptyText'>No Todos</p>
         }
     </div>
 }
