@@ -1,4 +1,4 @@
-module.exports = {
+{
     "env": {
         "browser": true,
         "es2021": true
@@ -16,6 +16,14 @@ module.exports = {
     "plugins": [
         "react"
     ],
-    "rules": {"react/prop-types": 0
+    "settings": {
+        "import/resolver" : {  // for not getting error on unused import or function
+            "node" : {
+                "extensions" : [".js"] 
+            }
+        }
+    },
+    "rules": {"react/prop-types": 0,
+    "no-unused-vars": "off"
     }
 }

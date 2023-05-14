@@ -15,7 +15,6 @@ const TodoModal = ({modalOpen, setModalOpen}) => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log(title)
         if(title && status) {
         dispatch(addTodo({
             id : uuid(),
@@ -41,7 +40,7 @@ return(
                 <MdOutlineClose />
             </div>
             <form className="todo_form" onSubmit={(e) => handleSubmit(e)}>
-                <h1 className="formTitle">Add Task</h1>
+                <h1 className="formTitle"> Add Item</h1>
                 <label htmlFor="title" value={title} onChange={(e) => setTitle(e.target.value)}> Title :
                     <input type="text" id="title"/>
                 </label>
