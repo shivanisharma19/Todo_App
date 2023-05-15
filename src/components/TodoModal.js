@@ -8,26 +8,31 @@ import { addTodo } from "../Slice/todoSlice"
 import '../style/modal.css'
 import '../style/button.css'
 
-const TodoModal = ({modalOpen, setModalOpen}) => {
+const TodoModal = ({type , modalOpen, setModalOpen, }) => {
     const dispatch  = useDispatch()
     const [title, setTitle] = useState('')
     const [status, setStatus] = useState('incomplete')
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        if(title && status) {
-        dispatch(addTodo({
-            id : uuid(),
-            title,
-            status,
-            time : new Date().toLocaleString(),
-        })
-        )
-        toast.success('Item Added Successfully')
-        setModalOpen(false)
-       }
-       else
-       toast.error('Please provide and total')
+        if(type === 'Add') {
+            if(title && status) {
+                dispatch(addTodo({
+                    id : uuid(),
+                    title,
+                    status,
+                    time : new Date().toLocaleString(),
+                })
+                )
+                toast.success('Item Added Successfully')
+                setModalOpen(false)
+            }
+            else
+            toast.error('Please provide an title')
+        }
+        else if (type === 'Update'){
+            console.log()
+        }
     }
 return(
     <>
@@ -40,7 +45,7 @@ return(
                 <MdOutlineClose />
             </div>
             <form className="todo_form" onSubmit={(e) => handleSubmit(e)}>
-                <h1 className="formTitle"> Add Item</h1>
+                <h1 className="formTitle"> {type} todo  </h1>
                 <label htmlFor="title" value={title} onChange={(e) => setTitle(e.target.value)}> Title :
                     <input type="text" id="title"/>
                 </label>
