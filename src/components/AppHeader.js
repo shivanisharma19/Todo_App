@@ -10,11 +10,11 @@ const AppHeader = () => {
     <div className="header" >
         <Button variant="primary" onClick={()=>setModalOpen(true)}>Add Task</Button>
         <DropdownButton id='filter'>
-            <option value="all">All</option>
-            <option value="incomplete">Incomplete</option>
-            <option value="complete">Complete</option>
+            <option value='all'>All</option>
+            <option value='incomplete'>Incomplete</option>
+            <option value='complete'>Complete</option>
         </DropdownButton>
-        <TodoModal modalOpen={modalOpen} setModalOpen={setModalOpen}/>
+        <TodoModal type= {'Add'} modalOpen={modalOpen} setModalOpen={setModalOpen}/>
     </div>
 )}
 
