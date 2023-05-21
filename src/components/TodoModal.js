@@ -38,10 +38,8 @@ return(
     <>
     {modalOpen &&
     <div className="wrapper">
-        <div className="form_container">
-            <div className="closeButton" onClick={()=>setModalOpen(false)}
-            onKeyDown={()=>setModalOpen(false)}
-            tabIndex={0}>
+        <div className="modal_container">
+            <div className="closeButton" onClick={()=>setModalOpen(false)}>
                 <MdOutlineClose />
             </div>
             <form className="todo_form" onSubmit={(e) => handleSubmit(e)}>

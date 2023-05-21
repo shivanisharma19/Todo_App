@@ -19,8 +19,8 @@ const AppContent = () => {
 
   const handleDelete = (todo) => {
     setConfirmationModal(true)
-    dispatch(deleteTodo(todo.id))
-    toast.success('ToDo sucessfully deleted')
+    // dispatch(deleteTodo(todo.id))
+    //toast.success('ToDo sucessfully deleted')
   }
 
   const handleUpdate = () => {
