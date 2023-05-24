@@ -1,0 +1,46 @@
+.todo_item {
+    display: flex;
+    align-items: center;
+    background-color: rgb(247, 247, 248);
+    border-radius: 1rem;
+    width: 95%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 0.5rem 0.5rem;
+    justify-content: space-between;
+  }
+  
+  .todo_details {
+    float: left;
+    display: flex;
+    align-items: center;
+    gap:1rem;
+  }
+  
+  .todo_text {
+    align-items: flex-start;
+    margin:0;
+    padding:1px;
+  
+    .completed {
+      text-decoration: line-through;
+    }
+  }
+  
+  .todo_time {
+    color: rgba(37, 37, 37, 0.74);
+    margin:0;
+    padding:1px;
+  }
+  
+  .todo_actions { 
+    overflow: hidden;
+    margin-right: 0;
+  }
+  
+  .delete, .edit {
+    background-color: rgb(227, 232, 236);
+    padding:5px;
+    margin: 5px;
+    border-radius: 5px;
+  }

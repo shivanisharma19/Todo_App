@@ -24,6 +24,13 @@ button, .dropdown_button {
 	color: black;
 }
 
+button.button--secondary:hover {
+	background-color: rgb(216, 148, 148);
+}
+
+button.button--primary:hover {
+	background-color: rgb(1, 12, 77);
+}
 #filter {
 	color: rgba(0, 0, 0, 0.747);
 	align-items: end;
@@ -52,4 +59,8 @@ button, .dropdown_button {
 	cursor: pointer;
 	transition: 0.3s ease all;
 	z-index: -1;
+}
+
+div.closeButton:hover {
+	background-color : rgb(219, 96, 96);
 }

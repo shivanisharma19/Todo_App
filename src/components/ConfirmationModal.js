@@ -6,12 +6,13 @@ import { deleteTodo } from '../Slice/todoSlice'
 import Button from '../utilities/Button'
 import '../style/modal.css'
 
-const ConfirmationModal = ({ id, modalOpen, setModalOpen}) => {
+const ConfirmationModal = ({ id, title, modalOpen, setModalOpen}) => {
     const dispatch = useDispatch()
+    console.log(id)
 
     const onSubmit = () => {
         dispatch(deleteTodo(id))
-        toast.success('ToDo sucessfully deleted')
+        toast.success('Todo sucessfully deleted')
         setModalOpen(false)
     }
 
@@ -23,7 +24,7 @@ const ConfirmationModal = ({ id, modalOpen, setModalOpen}) => {
                     <MdOutlineClose />
                 </div>
                 <div className='confirmation_text' >
-                    <p> Are you sure you want to delete the todo ? </p>
+                    <p> Are you sure you want to delete <b>{title}</b> ? </p>
                  </div>
                 <div className="buttonContainer">
                     <Button type="submit" variant="primary" onClick={()=>onSubmit()}> Delete </Button>
