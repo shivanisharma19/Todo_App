@@ -14,8 +14,6 @@ const TodoModal = ({type, modalOpen, setModalOpen, todo}) => {
     const [status, setStatus] = useState('incomplete')
 
     useEffect(() => {
-        console.log(modalOpen)
-        console.log(todo)
         if( type === 'Update' && todo) {
             setTitle(todo.title)
             setStatus(todo.status)
@@ -24,7 +22,6 @@ const TodoModal = ({type, modalOpen, setModalOpen, todo}) => {
             setTitle('')
             setStatus('incomplete')
         }
-        console.log(title) 
    }, [type, todo, modalOpen])
 
     const handleSubmit = (e) => {
