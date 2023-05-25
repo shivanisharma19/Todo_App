@@ -8,7 +8,6 @@ import '../style/modal.css'
 
 const ConfirmationModal = ({ id, title, modalOpen, setModalOpen}) => {
     const dispatch = useDispatch()
-    console.log(id)
 
     const onSubmit = () => {
         dispatch(deleteTodo(id))
