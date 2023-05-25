@@ -1,6 +1,7 @@
-  import React, {useState} from 'react'
+  import React, {useEffect, useState} from 'react'
   import { MdDelete, MdEdit } from "react-icons/md";
   import { format } from "date-fns";
+  import Checkbox from './Checkbox';
   import TodoModal from "./TodoModal"
   import ConfirmationModal from "./ConfirmationModal";
   import "../style/todoItem.css";
@@ -9,6 +10,14 @@
 
     const [modalOpen, setModalOpen] = useState(false);
     const [confirmationModal, setConfirmationModal] = useState(false);
+    const [checked, setChecked] = useState(false);
+
+    useEffect (() => {
+     if (todo.status === "complete")
+        setChecked(true)
+      else
+        setChecked(false)
+    }, [todo])
 
     const handleDelete = (todo) => {
       setConfirmationModal(true)
@@ -21,7 +30,7 @@
  return (
   <div className="todo_item">
     <div className="todo_details">
-      []
+      <Checkbox todo={todo} checked={checked} setChecked={setChecked} />  
       <div className="todo_text">
         <p className={(todo.status) === "complete" ? "todo_text completed" : "todo_text"}>{todo.title}</p>
           <p className="todo_time">
