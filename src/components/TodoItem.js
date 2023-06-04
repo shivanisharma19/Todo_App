@@ -1,6 +1,7 @@
   import React, {useEffect, useState} from 'react'
   import { MdDelete, MdEdit } from "react-icons/md";
   import { format } from "date-fns";
+  import classNames from 'classnames';
   import Checkbox from './Checkbox';
   import TodoModal from "./TodoModal"
   import ConfirmationModal from "./ConfirmationModal";
@@ -13,13 +14,10 @@
     const [checked, setChecked] = useState(false);
 
     useEffect (() => {
-     if (todo.status === "complete")
-        setChecked(true)
-      else
-        setChecked(false)
+     (todo.status === "complete") ? setChecked(true) : setChecked(false)
     }, [todo])
 
-    const handleDelete = (todo) => {
+    const handleDelete = () => {
       setConfirmationModal(true)
     }
   

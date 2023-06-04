@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
-import { updateTodo } from '../Slice/todoSlice'
 import { useDispatch } from 'react-redux'
+import { updateTodo } from '../Slice/todoSlice'
 import '../style/checkbox.css'
 
 const Checkbox = ({todo, checked, setChecked}) => {

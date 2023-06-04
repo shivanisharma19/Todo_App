@@ -2,8 +2,8 @@ import React from 'react'
 import { useDispatch } from 'react-redux'
 import { toast } from "react-hot-toast";
 import { MdOutlineClose } from "react-icons/md"
-import { deleteTodo } from '../Slice/todoSlice'
 import Button from '../utilities/Button'
+import { deleteTodo } from '../Slice/todoSlice'
 import '../style/modal.css'
 
 const ConfirmationModal = ({ id, title, modalOpen, setModalOpen}) => {
