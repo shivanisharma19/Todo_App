@@ -50,10 +50,10 @@ const TodoModal = ({type, modalOpen, setModalOpen, todo}) => {
                         status,
                     }))
                     toast.success('Sucessfully updated the todo')
-                    setModalOpen(false)
                 } else
                     toast.error('No Changes Made !')
              }
+             setModalOpen(false)
         }
     }
 
