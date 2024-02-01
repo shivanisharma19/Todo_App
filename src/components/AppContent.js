@@ -15,8 +15,6 @@ const AppContent = () => {
         return true 
     return todo.status === filterStatus
   })
-  
-  console.log(filteredTodoList)
 
   return (
     <div className="todo_wrap"> 
