@@ -1,7 +1,5 @@
   import React, {useEffect, useState} from 'react'
   import { MdDelete, MdEdit } from "react-icons/md";
-  import { format } from "date-fns";
-  import classNames from 'classnames';
   import Checkbox from './Checkbox';
   import TodoModal from "./TodoModal"
   import ConfirmationModal from "./ConfirmationModal";
@@ -32,7 +30,7 @@
       <div className="todo_text">
         <p className={(todo.status) === "complete" ? "todo_text completed" : "todo_text"}>{todo.title}</p>
           <p className="todo_time">
-            {format(new Date(todo.time), "p, dd/MM/yyy")}
+            {(todo.time)}
           </p>
       </div>
     </div>
