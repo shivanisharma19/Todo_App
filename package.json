@@ -20,7 +20,7 @@
   "scripts": {
     "dev": "react-scripts start",
     "build": "react-scripts build",
-    "eslint": "eslint",
+    "lint": "eslint src/*/*.jsx src/*/*.js --fix ",
     "start": "http-server -p 3000",
     "cy:run": "cypress run",
     "cy:e2e": "start-server-and-test start http://localhost:3000 cy:run"
