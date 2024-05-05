@@ -14,9 +14,9 @@ const Button = ({ children, type, variant, ...rest}) => {
 
 }
 
-const DropdownButton = ({children, id}) => {
+const DropdownButton = ({children, id, value, onChange}) => {
  return (
-    <select className="dropdown_button" id={id} >
+    <select className="dropdown_button" id={id} value={value} onChange={onChange}>
       {children}
     </select>
  )}

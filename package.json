@@ -1,23 +1,29 @@
 {
-  "name": "To-Do-App",
+  "name": "todo-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "eslint": "^8.36.0",
     "@reduxjs/toolkit": "^1.7.1",
+    "classnames": "^2.5.1",
+    "cypress": "^13.7.0",
+    "eslint": "^8.36.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-icons": "^4.3.1",
     "react-hot-toast": "^2.2.0",
+    "react-icons": "^4.3.1",
     "react-redux": "^7.2.6",
     "react-scripts": "^5.0.0",
+    "renovate": "^37.294.0",
+    "start-server-and-test": "^2.0.3",
     "uuid": "^8.3.2"
-    
   },
   "scripts": {
-    "start": "react-scripts start",
+    "dev": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test"
+    "eslint": "eslint",
+    "start": "http-server -p 3000",
+    "cy:run": "cypress run",
+    "cy:e2e": "start-server-and-test start http://localhost:3000 cy:run"
   },
   "browserslist": {
     "production": [
@@ -30,5 +36,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
   }
 }
