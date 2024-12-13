@@ -14,3 +14,19 @@ A simple Todo application built with **React**, **Redux** for state management, 
 - **Frontend**: React, JSX
 - **State Management**: Redux
 - **Testing**: Cypress
+
+
+# How to Run the Project
+
+* `npm install`
+* `npm run dev`
+
+# Test
+Written in Cypress
+
+## To run test cases in terminal
+* `npm install` _[Optional]_
+* `npm run cy:e2e`
+## To run test cases in Cypress Window
+* `npm install` _[Optional]_
+* `npm run cy:debug`
