@@ -5,7 +5,7 @@
   "dependencies": {
     "@reduxjs/toolkit": "^1.7.1",
     "classnames": "^2.5.1",
-    "cypress": "^13.7.0",
+    "cypress": "^13.15.2",
     "eslint": "^8.36.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -23,7 +23,9 @@
     "lint": "eslint src/*/*.jsx src/*/*.js --fix ",
     "start": "http-server -p 3000",
     "cy:run": "cypress run",
-    "cy:e2e": "start-server-and-test start http://localhost:3000 cy:run"
+    "cy:open": "cypress open",
+    "cy:e2e": "start-server-and-test start http://localhost:3000 cy:run",
+    "cy:debug": "start-server-and-test start http://localhost:3000 cy:open"
   },
   "browserslist": {
     "production": [
